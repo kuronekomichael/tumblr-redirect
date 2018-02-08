@@ -9,7 +9,7 @@ logging.basicConfig(
 
 app = Flask(__name__)
 REDIRECT_BASE_URL = os.environ.get("TUMBLR_REDIRECT_BASE_URL")
-REDIRECT_CODE = int(os.environ.get("TUMBLR_REDIRECT_CODE", 302))
+REDIRECT_CODE = int(os.environ.get("TUMBLR_REDIRECT_CODE", 301))
 
 def get_redirect_target(path):
     return "%s%s" % (REDIRECT_BASE_URL, path)
